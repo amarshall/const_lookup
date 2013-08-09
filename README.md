@@ -29,7 +29,7 @@ ConstLookup.lookup('E', A::C)  #=> #<NameError: Failed to find `E' in A::C>
 
 Or, if you like monkey-patching Ruby core:
 
-```
+```ruby
 module A
   module B; end
   module C; end
