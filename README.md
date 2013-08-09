@@ -26,6 +26,21 @@ ConstLookup.lookup('D', A::C)  #=> D
 ConstLookup.lookup('E', A::C)  #=> #<NameError: Failed to find `E' in A::C>
 ```
 
+Or, if you like monkey-patching Ruby core:
+
+```
+module A
+  module B; end
+  module C; end
+end
+module D; end
+
+require 'const_lookup/core_ext'
+
+A::C.const_lookup('B')  #=> A::B
+A::C.const_lookup('D')  #=> D
+```
+
 ## Contributing
 
 Contributions are welcome. Please be sure that your pull requests are atomic so they can be considered and accepted separately.
