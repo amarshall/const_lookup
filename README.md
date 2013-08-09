@@ -1,5 +1,7 @@
 # ConstLookup
 
+[![Build Status](https://secure.travis-ci.org/amarshall/const_lookup.png?branch=master)](http://travis-ci.org/amarshall/const_lookup)
+
 Makes resolving a constant in a given namespace easy.
 
 ## Installation
