@@ -2,7 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/amarshall/const_lookup.png?branch=master)](http://travis-ci.org/amarshall/const_lookup)
 [![Code Climate rating](https://codeclimate.com/github/amarshall/const_lookup.png)](https://codeclimate.com/github/amarshall/const_lookup)
-[![Gem Version](https://badge.fury.io/rb/const_lookup.png)](https://badge.fury.io/rb/const_lookup)
+[![Gem Version](https://badge.fury.io/rb/const_lookup.png)](https://rubygems.org/gems/const_lookup)
 
 Makes resolving a constant in a given namespace easy.
 
