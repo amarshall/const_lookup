@@ -12,10 +12,10 @@ describe ConstLookup do
       ConstLookup.lookup name, namespace
     end
 
-    it "creates the new finder with no args when no namespace given" do
+    it "creates the new finder with Object when no namespace given" do
       name = double
       finder = double
-      expect(ConstLookup).to receive(:new).with(no_args).and_return finder
+      expect(ConstLookup).to receive(:new).with(Object).and_return finder
       expect(finder).to receive(:lookup).with(name)
 
       ConstLookup.lookup name
@@ -85,11 +85,6 @@ describe ConstLookup do
   end
 
   describe "#lookup_path" do
-    it "is just Object when no namespace is given" do
-      constant_finder = ConstLookup.new
-      expect(constant_finder.lookup_path).to eq [Object]
-    end
-
     it "is a list of each constant in the namespace in ascending order" do
       stub_const('Foo::Bar::Baz', Module.new)
       constant_finder = ConstLookup.new(Foo::Bar::Baz)

@@ -1,11 +1,11 @@
 require 'const_lookup/version'
 
 class ConstLookup
-  def self.lookup name, namespace = nil
-    new(*namespace).lookup(name)
+  def self.lookup name, namespace = Object
+    new(namespace).lookup(name)
   end
 
-  def initialize namespace = Object
+  def initialize namespace
     raise ArgumentError unless namespace.is_a? Module
     @namespace = namespace.to_s
   end
