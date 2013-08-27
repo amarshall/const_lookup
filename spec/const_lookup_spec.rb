@@ -32,7 +32,9 @@ describe ConstLookup do
     end
 
     it "raises an ArgumentError when the namespace is not a Class/Module" do
-      expect { ConstLookup.new(Object.new) }.to raise_error ArgumentError
+      expect do
+        ConstLookup.new(Object.new)
+      end.to raise_error ArgumentError, 'namespace must be a Module'
     end
   end
 

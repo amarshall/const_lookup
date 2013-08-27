@@ -6,7 +6,7 @@ class ConstLookup
   end
 
   def initialize namespace
-    raise ArgumentError unless namespace.is_a? Module
+    raise ArgumentError, 'namespace must be a Module' unless namespace.is_a? Module
     @namespace = namespace.to_s
   end
 
