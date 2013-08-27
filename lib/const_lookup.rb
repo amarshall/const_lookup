@@ -6,6 +6,7 @@ class ConstLookup
   end
 
   def initialize namespace = Object
+    raise ArgumentError unless namespace.is_a? Module
     @namespace = namespace.to_s
   end
 

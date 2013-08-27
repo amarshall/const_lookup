@@ -22,6 +22,20 @@ describe ConstLookup do
     end
   end
 
+  describe "#initialize" do
+    it "accepts a Module as a namespace" do
+      expect { ConstLookup.new(Module.new) }.to_not raise_error
+    end
+
+    it "accepts a Class as a namespace" do
+      expect { ConstLookup.new(Class.new) }.to_not raise_error
+    end
+
+    it "raises an ArgumentError when the namespace is not a Class/Module" do
+      expect { ConstLookup.new(Object.new) }.to raise_error ArgumentError
+    end
+  end
+
   describe "#lookup" do
     it "returns the constant when it resides in the most specific namespace" do
       stub_const('Foo::Bar::Baz', Module.new)
