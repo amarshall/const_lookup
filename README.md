@@ -42,6 +42,23 @@ A::C.const_lookup('B')  #=> A::B
 A::C.const_lookup('D')  #=> D
 ```
 
+Compare this with using [`Module#const_get`](http://ruby-doc.org/core/Module.html#method-i-const_get):
+
+```ruby
+module A
+  module B; end
+  module C; end
+end
+module D; end
+
+A::C.const_get('A')  #=> A
+A::C.const_get('B')  #=> #<NameError: uninitialized constant A::C::B>
+A::C.const_get('D')  #=> D
+A::C.const_get('E')  #=> #<NameError: uninitialized constant A::C::E>
+```
+
+This is because `const_get` looks up the *ancestor tree*, not the namespace tree like `ConstLookup` does.
+
 ## Contributing
 
 Contributions are welcome. Please be sure that your pull requests are atomic so they can be considered and accepted separately.
