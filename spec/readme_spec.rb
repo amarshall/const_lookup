@@ -60,9 +60,9 @@ describe "README examples" do
 
     it "works" do
       expect(A::C.const_get('A')).to eq A
-      expect{A::C.const_get('B')}.to raise_error NameError, %q(uninitialized constant A::C::B)
+      expect{A::C.const_get('B')}.to raise_error NameError, %r(uninitialized constant:? A::C::B)
       expect(A::C.const_get('D')).to eq D
-      expect{A::C.const_get('E')}.to raise_error NameError, %q(uninitialized constant A::C::E)
+      expect{A::C.const_get('E')}.to raise_error NameError, %r(uninitialized constant:? A::C::E)
     end
   end
 end
