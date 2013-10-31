@@ -27,8 +27,8 @@ class ConstLookup
       lookup_path << [*lookup_path.last, part]
     end.map do |parts|
       parts.join '::'
-    end.map do |constant_name|
-      Object.const_get constant_name
+    end.map do |name|
+      Object.const_get name
     end.reverse
   end
 end
