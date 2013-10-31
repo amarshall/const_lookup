@@ -28,7 +28,15 @@ class ConstLookup
     end.map do |parts|
       parts.join '::'
     end.map do |name|
-      Object.const_get name
+      namespaced_const_get name
     end.reverse
+  end
+
+  private
+
+  def namespaced_const_get name
+    name.split('::').reduce(Object) do |constant, part|
+      constant.const_get part
+    end
   end
 end

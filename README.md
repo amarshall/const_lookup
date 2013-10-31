@@ -8,7 +8,7 @@ Makes resolving a constant in a given namespace easy.
 
 ## Installation
 
-Install as usual: `gem install const_lookup` or add `gem 'const_lookup'` to your Gemfile. Note that Ruby 2.0 is required.
+Install as usual: `gem install const_lookup` or add `gem 'const_lookup'` to your Gemfile. See `.travis.yml` for supported (tested) Ruby versions.
 
 ## Usage
 
