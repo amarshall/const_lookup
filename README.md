@@ -1,8 +1,8 @@
 # ConstLookup
 
-[![Build Status](https://secure.travis-ci.org/amarshall/const_lookup.png?branch=master)](https://travis-ci.org/amarshall/const_lookup)
-[![Code Climate rating](https://codeclimate.com/github/amarshall/const_lookup.png)](https://codeclimate.com/github/amarshall/const_lookup)
-[![Gem Version](https://badge.fury.io/rb/const_lookup.png)](https://rubygems.org/gems/const_lookup)
+[![Gem Version](https://img.shields.io/gem/v/const_lookup.svg?style=flat)](https://rubygems.org/gems/const_lookup)
+[![Build Status](https://secure.travis-ci.org/amarshall/const_lookup.svg?branch=master)](https://travis-ci.org/amarshall/const_lookup)
+[![Code Climate rating](https://codeclimate.com/github/amarshall/const_lookup.svg)](https://codeclimate.com/github/amarshall/const_lookup)
 
 Makes resolving a constant in a given namespace easy.
 
