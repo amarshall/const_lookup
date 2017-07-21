@@ -51,10 +51,11 @@ module A
 end
 module D; end
 
-A::C.const_get('A')  #=> A
-A::C.const_get('B')  #=> #<NameError: uninitialized constant A::C::B>
-A::C.const_get('D')  #=> D
-A::C.const_get('E')  #=> #<NameError: uninitialized constant A::C::E>
+A::C.const_get('A')        #=> A
+A::C.const_get('B')        #=> #<NameError: uninitialized constant A::C::B>
+A::C.const_get('B', true)  #=> #<NameError: uninitialized constant A::C::B>
+A::C.const_get('D')        #=> D
+A::C.const_get('E')        #=> #<NameError: uninitialized constant A::C::E>
 ```
 
 This is because `const_get` looks up the *ancestor tree*, not the namespace tree like `ConstLookup` does.
