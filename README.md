@@ -71,4 +71,4 @@ Contributions are welcome. Please be sure that your pull requests are atomic so 
 
 ## Credits & License
 
-Copyright © 2013 J. Andrew Marshall. License is available in the LICENSE file.
+Copyright © 2013–2017 J. Andrew Marshall. License is available in the LICENSE file.
